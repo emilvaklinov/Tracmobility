@@ -16,6 +16,7 @@
 		486E2F6A25D2E82F003332C4 /* SignupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E2F6925D2E82F003332C4 /* SignupButton.swift */; };
 		486E2F6E25D2E846003332C4 /* GmailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E2F6D25D2E846003332C4 /* GmailButton.swift */; };
 		486E2F7125D2FDA0003332C4 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E2F7025D2FDA0003332C4 /* TrackViewController.swift */; };
+		486E2F9825D318B7003332C4 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 486E2F9725D318B7003332C4 /* Auth0.plist */; };
 		A858F9834543FF2FE8AAD20D /* Pods_Tracmobility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CBE5717755F6FD49D2BB81 /* Pods_Tracmobility.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		486E2F6925D2E82F003332C4 /* SignupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupButton.swift; sourceTree = "<group>"; };
 		486E2F6D25D2E846003332C4 /* GmailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailButton.swift; sourceTree = "<group>"; };
 		486E2F7025D2FDA0003332C4 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		486E2F9725D318B7003332C4 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		7F77869CD13AE7F595907BEE /* Pods-Tracmobility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracmobility.debug.xcconfig"; path = "Target Support Files/Pods-Tracmobility/Pods-Tracmobility.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CBE5717755F6FD49D2BB81 /* Pods_Tracmobility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracmobility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6C878C8CFD2BF4BD1A1B42 /* Pods-Tracmobility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracmobility.release.xcconfig"; path = "Target Support Files/Pods-Tracmobility/Pods-Tracmobility.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				486E2E7925D2BC82003332C4 /* Storyboards */,
 				486E2E6825D2B99B003332C4 /* Assets.xcassets */,
 				486E2E6D25D2B99C003332C4 /* Info.plist */,
+				486E2F9725D318B7003332C4 /* Auth0.plist */,
 			);
 			path = Tracmobility;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				486E2E6C25D2B99B003332C4 /* LaunchScreen.storyboard in Resources */,
 				486E2E6925D2B99B003332C4 /* Assets.xcassets in Resources */,
 				486E2E6725D2B999003332C4 /* Main.storyboard in Resources */,
+				486E2F9825D318B7003332C4 /* Auth0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

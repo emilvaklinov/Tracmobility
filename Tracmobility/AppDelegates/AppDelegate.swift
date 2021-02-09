@@ -7,6 +7,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import Auth0
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,14 +29,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         options: [UIApplication.OpenURLOptionsKey : Any] = [:]
     ) -> Bool {
 
+        ///Facebook login
         ApplicationDelegate.shared.application(
             app,
             open: url,
             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
+        /// Auth0 log in
+        return Auth0.resumeAuth(url)
 
     }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
