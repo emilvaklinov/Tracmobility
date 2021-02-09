@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		486E2E6725D2B999003332C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486E2E6525D2B999003332C4 /* Main.storyboard */; };
 		486E2E6925D2B99B003332C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E2E6825D2B99B003332C4 /* Assets.xcassets */; };
 		486E2E6C25D2B99B003332C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486E2E6A25D2B99B003332C4 /* LaunchScreen.storyboard */; };
+		A858F9834543FF2FE8AAD20D /* Pods_Tracmobility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CBE5717755F6FD49D2BB81 /* Pods_Tracmobility.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		486E2E6825D2B99B003332C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		486E2E6B25D2B99B003332C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		486E2E6D25D2B99C003332C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F77869CD13AE7F595907BEE /* Pods-Tracmobility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracmobility.debug.xcconfig"; path = "Target Support Files/Pods-Tracmobility/Pods-Tracmobility.debug.xcconfig"; sourceTree = "<group>"; };
+		A4CBE5717755F6FD49D2BB81 /* Pods_Tracmobility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracmobility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF6C878C8CFD2BF4BD1A1B42 /* Pods-Tracmobility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracmobility.release.xcconfig"; path = "Target Support Files/Pods-Tracmobility/Pods-Tracmobility.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A858F9834543FF2FE8AAD20D /* Pods_Tracmobility.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46B94809FB0FD600CF0D0A37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F77869CD13AE7F595907BEE /* Pods-Tracmobility.debug.xcconfig */,
+				DF6C878C8CFD2BF4BD1A1B42 /* Pods-Tracmobility.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		486E2E5325D2B999003332C4 = {
 			isa = PBXGroup;
 			children = (
 				486E2E5E25D2B999003332C4 /* Tracmobility */,
 				486E2E5D25D2B999003332C4 /* Products */,
+				46B94809FB0FD600CF0D0A37 /* Pods */,
+				9AAD49C11F0DF226BE30F918 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +107,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		9AAD49C11F0DF226BE30F918 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4CBE5717755F6FD49D2BB81 /* Pods_Tracmobility.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 486E2E7025D2B99C003332C4 /* Build configuration list for PBXNativeTarget "Tracmobility" */;
 			buildPhases = (
+				21380BF5E8BCA282E0FCA741 /* [CP] Check Pods Manifest.lock */,
 				486E2E5825D2B999003332C4 /* Sources */,
 				486E2E5925D2B999003332C4 /* Frameworks */,
 				486E2E5A25D2B999003332C4 /* Resources */,
+				E0D37F48AABB3D525D2DDC1C /* [CP] Embed Pods Frameworks */,
+				A64AF228FF3627CED2CCD781 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +182,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21380BF5E8BCA282E0FCA741 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tracmobility-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A64AF228FF3627CED2CCD781 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tracmobility/Pods-Tracmobility-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tracmobility/Pods-Tracmobility-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tracmobility/Pods-Tracmobility-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0D37F48AABB3D525D2DDC1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tracmobility/Pods-Tracmobility-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tracmobility/Pods-Tracmobility-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tracmobility/Pods-Tracmobility-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		486E2E5825D2B999003332C4 /* Sources */ = {
@@ -307,10 +393,12 @@
 		};
 		486E2E7125D2B99C003332C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F77869CD13AE7F595907BEE /* Pods-Tracmobility.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2RQK3JX6CU;
 				INFOPLIST_FILE = Tracmobility/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,10 +414,12 @@
 		};
 		486E2E7225D2B99C003332C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF6C878C8CFD2BF4BD1A1B42 /* Pods-Tracmobility.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2RQK3JX6CU;
 				INFOPLIST_FILE = Tracmobility/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
