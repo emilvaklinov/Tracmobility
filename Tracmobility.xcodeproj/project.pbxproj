@@ -13,6 +13,9 @@
 		486E2E6725D2B999003332C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486E2E6525D2B999003332C4 /* Main.storyboard */; };
 		486E2E6925D2B99B003332C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E2E6825D2B99B003332C4 /* Assets.xcassets */; };
 		486E2E6C25D2B99B003332C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486E2E6A25D2B99B003332C4 /* LaunchScreen.storyboard */; };
+		486E2F6A25D2E82F003332C4 /* SignupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E2F6925D2E82F003332C4 /* SignupButton.swift */; };
+		486E2F6E25D2E846003332C4 /* GmailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E2F6D25D2E846003332C4 /* GmailButton.swift */; };
+		486E2F7125D2FDA0003332C4 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E2F7025D2FDA0003332C4 /* TrackViewController.swift */; };
 		A858F9834543FF2FE8AAD20D /* Pods_Tracmobility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CBE5717755F6FD49D2BB81 /* Pods_Tracmobility.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		486E2E6825D2B99B003332C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		486E2E6B25D2B99B003332C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		486E2E6D25D2B99C003332C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		486E2F6925D2E82F003332C4 /* SignupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupButton.swift; sourceTree = "<group>"; };
+		486E2F6D25D2E846003332C4 /* GmailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailButton.swift; sourceTree = "<group>"; };
+		486E2F7025D2FDA0003332C4 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		7F77869CD13AE7F595907BEE /* Pods-Tracmobility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracmobility.debug.xcconfig"; path = "Target Support Files/Pods-Tracmobility/Pods-Tracmobility.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CBE5717755F6FD49D2BB81 /* Pods_Tracmobility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracmobility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6C878C8CFD2BF4BD1A1B42 /* Pods-Tracmobility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracmobility.release.xcconfig"; path = "Target Support Files/Pods-Tracmobility/Pods-Tracmobility.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +78,7 @@
 		486E2E5E25D2B999003332C4 /* Tracmobility */ = {
 			isa = PBXGroup;
 			children = (
+				486E2F6825D2E7FB003332C4 /* Helpers */,
 				486E2E7525D2BBBF003332C4 /* AppDelegates */,
 				486E2E7725D2BC69003332C4 /* Controllers */,
 				486E2E7925D2BC82003332C4 /* Storyboards */,
@@ -94,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				486E2E6325D2B999003332C4 /* ViewController.swift */,
+				486E2F7025D2FDA0003332C4 /* TrackViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,6 +113,15 @@
 				486E2E6A25D2B99B003332C4 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		486E2F6825D2E7FB003332C4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				486E2F6925D2E82F003332C4 /* SignupButton.swift */,
+				486E2F6D25D2E846003332C4 /* GmailButton.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		9AAD49C11F0DF226BE30F918 /* Frameworks */ = {
@@ -250,6 +267,9 @@
 				486E2E6425D2B999003332C4 /* ViewController.swift in Sources */,
 				486E2E6025D2B999003332C4 /* AppDelegate.swift in Sources */,
 				486E2E6225D2B999003332C4 /* SceneDelegate.swift in Sources */,
+				486E2F6A25D2E82F003332C4 /* SignupButton.swift in Sources */,
+				486E2F7125D2FDA0003332C4 /* TrackViewController.swift in Sources */,
+				486E2F6E25D2E846003332C4 /* GmailButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
