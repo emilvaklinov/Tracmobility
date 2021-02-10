@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tracmobility" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignupViewController" customModule="Tracmobility" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,6 +47,9 @@
                                                         <integer key="value" value="14"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="googleSignInClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bM8-Ac-fRT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8st-uA-KV5" customClass="FBSDKButton">
                                                 <rect key="frame" x="132" y="0.0" width="65" height="74"/>
@@ -65,6 +68,9 @@
                                                         <integer key="value" value="14"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="facebookSignInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SsU-Ov-tUh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -76,7 +82,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="CIp-6J-pTg" kind="presentation" modalPresentationStyle="currentContext" id="w9U-Qx-I9c"/>
+                                            <action selector="signUpButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28X-3Y-Rmb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -111,6 +117,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="jCa-4Z-uKn"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -131,6 +140,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="gOd-zP-cRN"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -151,6 +163,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hKp-od-DiN"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -175,6 +190,7 @@
                         <outlet property="gmailButton" destination="xk5-pI-mzh" id="SgS-Gl-095"/>
                         <outlet property="lastName" destination="6g4-RP-sBq" id="XkB-47-xAb"/>
                         <outlet property="signUpButton" destination="Ycz-97-heE" id="mps-iz-yKf"/>
+                        <segue destination="CIp-6J-pTg" kind="presentation" identifier="trackVC" modalPresentationStyle="fullScreen" id="VFq-9k-lyF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -184,7 +200,7 @@
         <!--Track View Controller-->
         <scene sceneID="Udy-YN-8mR">
             <objects>
-                <viewController id="CIp-6J-pTg" customClass="TrackViewController" customModule="Tracmobility" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrackViewController" id="CIp-6J-pTg" customClass="TrackViewController" customModule="Tracmobility" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="URO-6G-WkN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,7 +311,7 @@
         <!--Email Sign UpVC-->
         <scene sceneID="ln3-cB-VVK">
             <objects>
-                <viewController id="vc9-ul-UaD" customClass="EmailSignUpVC" customModule="Brezaa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vc9-ul-UaD" customClass="EmailSignUpVC" customModule="Tracmobility" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1YC-Be-4ki">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

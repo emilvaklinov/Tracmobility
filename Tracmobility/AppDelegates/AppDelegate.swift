@@ -7,12 +7,13 @@
 
 import UIKit
 import FBSDKCoreKit
+import GoogleSignIn
 import Auth0
+//import Firebase
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         ApplicationDelegate.shared.application(
@@ -20,16 +21,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             didFinishLaunchingWithOptions: launchOptions )
         // For Delay 2.5 second after default launch time...
         Thread.sleep(forTimeInterval: 2.5)
+        // Use Firebase library to configure APIs
+//        FirebaseApp.configure()
+//
+//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+//        GIDSignIn.sharedInstance().delegate = self
+        
+        // Initialize sign-in Gmail
+        GIDSignIn.sharedInstance().clientID = "73257056819-q5b8ej8183aj5g4cc2tai2jadfefgcgt.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self  // If AppDelegate conforms to GIDSignInDelegate
+        
         return true
     }
-
+    
     func application(
         _ app: UIApplication,
         open url: URL,
         options: [UIApplication.OpenURLOptionsKey : Any] = [:]
     ) -> Bool {
 
-        ///Facebook login
+        ///Facebook andd Gmail login
         ApplicationDelegate.shared.application(
             app,
             open: url,
@@ -38,7 +49,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         /// Auth0 log in
         return Auth0.resumeAuth(url)
-
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+      if let error = error {
+        if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+          print("The user has not signed in before or they have since signed out.")
+        } else {
+          print("\(error.localizedDescription)")
+        }
+        return
+      }
+      // Perform any operations on signed in user here.
+      let userId = user.userID                  // For client-side use only!
+      let idToken = user.authentication.idToken // Safe to send to the server
+      let fullName = user.profile.name
+      let givenName = user.profile.givenName
+      let familyName = user.profile.familyName
+      let email = user.profile.email
+        print(userId ?? 0)
+        print(idToken ?? "")
+        print(fullName ?? "")
+        print(givenName ?? "")
+        print(familyName ?? "")
+        print(email ?? "")
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+              withError error: Error!) {
+      // Perform any operations when the user disconnects from app here.
+     print("User is disconnected")
     }
     
     // MARK: UISceneSession Lifecycle
