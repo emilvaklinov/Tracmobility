@@ -18,6 +18,7 @@
 		486E2F7125D2FDA0003332C4 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E2F7025D2FDA0003332C4 /* TrackViewController.swift */; };
 		486E2F9825D318B7003332C4 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 486E2F9725D318B7003332C4 /* Auth0.plist */; };
 		4875B18025D3EE3F005D0EA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4875B17F25D3EE3F005D0EA1 /* GoogleService-Info.plist */; };
+		4875B19F25D417CD005D0EA1 /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4875B19E25D417CD005D0EA1 /* ApplePayViewController.swift */; };
 		A858F9834543FF2FE8AAD20D /* Pods_Tracmobility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CBE5717755F6FD49D2BB81 /* Pods_Tracmobility.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		486E2F7025D2FDA0003332C4 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		486E2F9725D318B7003332C4 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		4875B17F25D3EE3F005D0EA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4875B19C25D414EE005D0EA1 /* Tracmobility.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tracmobility.entitlements; sourceTree = "<group>"; };
+		4875B19E25D417CD005D0EA1 /* ApplePayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayViewController.swift; sourceTree = "<group>"; };
 		7F77869CD13AE7F595907BEE /* Pods-Tracmobility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracmobility.debug.xcconfig"; path = "Target Support Files/Pods-Tracmobility/Pods-Tracmobility.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CBE5717755F6FD49D2BB81 /* Pods_Tracmobility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracmobility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6C878C8CFD2BF4BD1A1B42 /* Pods-Tracmobility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracmobility.release.xcconfig"; path = "Target Support Files/Pods-Tracmobility/Pods-Tracmobility.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		486E2E5E25D2B999003332C4 /* Tracmobility */ = {
 			isa = PBXGroup;
 			children = (
+				4875B19C25D414EE005D0EA1 /* Tracmobility.entitlements */,
 				486E2F6825D2E7FB003332C4 /* Helpers */,
 				486E2E7525D2BBBF003332C4 /* AppDelegates */,
 				486E2E7725D2BC69003332C4 /* Controllers */,
@@ -108,6 +112,7 @@
 			children = (
 				486E2E6325D2B999003332C4 /* SignupViewController.swift */,
 				486E2F7025D2FDA0003332C4 /* TrackViewController.swift */,
+				4875B19E25D417CD005D0EA1 /* ApplePayViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				486E2F6A25D2E82F003332C4 /* SignupButton.swift in Sources */,
 				486E2F7125D2FDA0003332C4 /* TrackViewController.swift in Sources */,
 				486E2F6E25D2E846003332C4 /* GmailButton.swift in Sources */,
+				4875B19F25D417CD005D0EA1 /* ApplePayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tracmobility/Tracmobility.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2RQK3JX6CU;
 				INFOPLIST_FILE = Tracmobility/Info.plist;
@@ -446,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tracmobility/Tracmobility.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2RQK3JX6CU;
 				INFOPLIST_FILE = Tracmobility/Info.plist;

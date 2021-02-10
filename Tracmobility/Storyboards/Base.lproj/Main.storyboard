@@ -25,68 +25,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="sA5-vD-cVd">
-                                <rect key="frame" x="89" y="410" width="197" height="188"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="ShW-hM-1VP">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="74"/>
-                                        <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xk5-pI-mzh" customClass="GmailButton" customModule="Tracmobility">
-                                                <rect key="frame" x="0.0" y="0.0" width="64" height="74"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="64" id="iPY-e3-vXb"/>
-                                                    <constraint firstAttribute="height" constant="74" id="m45-lv-jvr"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="17"/>
-                                                <state key="normal" image="gmail-logo">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="14"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="googleSignInClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bM8-Ac-fRT"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8st-uA-KV5" customClass="FBSDKButton">
-                                                <rect key="frame" x="132" y="0.0" width="65" height="74"/>
-                                                <color key="backgroundColor" red="0.2274509804" green="0.3411764706" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="74" id="Hzx-cf-8Y8"/>
-                                                    <constraint firstAttribute="width" constant="65" id="xL5-Ir-ngD"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="17"/>
-                                                <inset key="imageEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" image="facebook_logo_white">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="14"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="facebookSignInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SsU-Ov-tUh"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycz-97-heE" customClass="SignupButton" customModule="Tracmobility">
-                                        <rect key="frame" x="0.0" y="150" width="197" height="38"/>
-                                        <color key="backgroundColor" red="0.25943872330000001" green="0.57626461979999999" blue="0.61008149389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="ProximaNovaSoft-Bold" family="Proxima Nova Soft" pointSize="22"/>
-                                        <state key="normal" title="Sign Up">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="signUpButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28X-3Y-Rmb"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="byc-08-ZZD">
                                 <rect key="frame" x="16" y="70" width="343" height="272"/>
                                 <subviews>
@@ -173,17 +111,97 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="IhS-60-CM6">
+                                <rect key="frame" x="82" y="438" width="211" height="160"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zma-or-Ve3">
+                                        <rect key="frame" x="0.0" y="0.0" width="211" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xk5-pI-mzh" customClass="GmailButton" customModule="Tracmobility">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="iPY-e3-vXb"/>
+                                                    <constraint firstAttribute="height" constant="65" id="m45-lv-jvr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="17"/>
+                                                <state key="normal" image="gmail-logo">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="googleSignInClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bM8-Ac-fRT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2U-fZ-Mqz" customClass="GmailButton" customModule="Tracmobility" customModuleProvider="target">
+                                                <rect key="frame" x="73" y="0.0" width="65" height="65"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="IJk-eZ-L0j"/>
+                                                    <constraint firstAttribute="height" constant="65" id="bcM-nh-yxu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <state key="normal" image="apple_logo_white"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="appleSignInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uix-Gt-rhu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8st-uA-KV5" customClass="FBSDKButton">
+                                                <rect key="frame" x="146" y="0.0" width="65" height="65"/>
+                                                <color key="backgroundColor" red="0.2274509804" green="0.3411764706" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="B6c-Gb-oUm"/>
+                                                    <constraint firstAttribute="width" constant="65" id="GDd-jd-m7V"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" image="facebook_logo_white">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="facebookSignInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SsU-Ov-tUh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycz-97-heE" customClass="SignupButton" customModule="Tracmobility">
+                                        <rect key="frame" x="0.0" y="122" width="211" height="38"/>
+                                        <color key="backgroundColor" red="0.25943872330000001" green="0.57626461979999999" blue="0.61008149389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ProximaNovaSoft-Bold" family="Proxima Nova Soft" pointSize="22"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28X-3Y-Rmb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="byc-08-ZZD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="2aH-ov-GkF"/>
                             <constraint firstItem="byc-08-ZZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KRB-Se-7fF"/>
-                            <constraint firstItem="sA5-vD-cVd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S4w-dQ-Geo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sA5-vD-cVd" secondAttribute="bottom" constant="69" id="hF8-QI-Yh3"/>
+                            <constraint firstItem="IhS-60-CM6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uqr-Hr-Uz0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IhS-60-CM6" secondAttribute="bottom" constant="69" id="d0t-DD-dyT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="appleButton" destination="V2U-fZ-Mqz" id="X0c-66-Wdf"/>
                         <outlet property="email" destination="yoV-8q-uLT" id="wI2-Vr-nWA"/>
                         <outlet property="facebookButton" destination="8st-uA-KV5" id="frB-t1-VjK"/>
                         <outlet property="firstName" destination="IHn-Oj-yst" id="4hw-tS-ExX"/>
@@ -195,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="88.605697151424295"/>
+            <point key="canvasLocation" x="212" y="81"/>
         </scene>
         <!--Track View Controller-->
         <scene sceneID="Udy-YN-8mR">
@@ -311,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="896.79999999999995" y="88.605697151424295"/>
         </scene>
-        <!--Email Sign UpVC-->
+        <!--Apple Pay View Controller-->
         <scene sceneID="ln3-cB-VVK">
             <objects>
-                <viewController id="vc9-ul-UaD" customClass="EmailSignUpVC" customModule="Tracmobility" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vc9-ul-UaD" customClass="ApplePayViewController" customModule="Tracmobility" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1YC-Be-4ki">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -529,10 +547,21 @@
                                             <segue destination="Clt-QK-ipN" kind="unwind" unwindAction="unwindToMap:" id="R50-kw-GKI"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BJ-Ok-SrH">
+                                        <rect key="frame" x="185" y="576" width="77" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="3UZ-6d-ARv"/>
+                                        </constraints>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-6" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Pay" image="apple-logo"/>
+                                        <connections>
+                                            <action selector="purchaseItem:" destination="vc9-ul-UaD" eventType="touchUpInside" id="wiR-W4-3rh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.29447132349999999" green="0.61768412589999999" blue="0.65102928879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Skj-gT-XqE" secondAttribute="trailing" constant="20" symbolic="YES" id="2b9-fM-jzY"/>
                                     <constraint firstItem="4En-vb-thf" firstAttribute="top" secondItem="T50-at-EhY" secondAttribute="bottom" constant="8" symbolic="YES" id="4LS-gc-TAd"/>
                                     <constraint firstItem="NRq-1Q-lqb" firstAttribute="centerX" secondItem="IOH-ik-Atj" secondAttribute="centerX" id="D50-iZ-niY"/>
                                     <constraint firstAttribute="trailing" secondItem="TcD-a7-8eU" secondAttribute="trailing" constant="40" id="Jce-13-w67"/>
@@ -548,8 +577,10 @@
                                     <constraint firstItem="TcD-a7-8eU" firstAttribute="leading" secondItem="IOH-ik-Atj" secondAttribute="leading" constant="40" id="ks0-mq-HCF"/>
                                     <constraint firstAttribute="trailing" secondItem="T50-at-EhY" secondAttribute="trailing" constant="30" id="kuq-Mc-WeK"/>
                                     <constraint firstItem="NRq-1Q-lqb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IOH-ik-Atj" secondAttribute="leading" constant="59.5" id="lgd-3n-ktp"/>
+                                    <constraint firstAttribute="trailing" secondItem="5BJ-Ok-SrH" secondAttribute="trailing" constant="8" id="t98-sx-zYd"/>
                                     <constraint firstItem="T50-at-EhY" firstAttribute="top" secondItem="IOH-ik-Atj" secondAttribute="top" constant="30" id="v40-KZ-Sll"/>
                                     <constraint firstItem="T50-at-EhY" firstAttribute="leading" secondItem="IOH-ik-Atj" secondAttribute="leading" constant="31" id="x65-z5-XYg"/>
+                                    <constraint firstAttribute="bottom" secondItem="5BJ-Ok-SrH" secondAttribute="bottom" constant="8" id="zCb-nL-Dgv"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -567,11 +598,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzo-h3-Sv3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Clt-QK-ipN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="87.706146926536732"/>
+            <point key="canvasLocation" x="2705" y="-251"/>
         </scene>
     </scenes>
     <resources>
         <image name="TRAC Mobility Logo" width="1500" height="1500"/>
+        <image name="apple-logo" width="23" height="23"/>
+        <image name="apple_logo_white" width="24" height="24"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="envelope.open" catalog="system" width="128" height="122"/>
         <image name="facebook_logo_white" width="24" height="24"/>

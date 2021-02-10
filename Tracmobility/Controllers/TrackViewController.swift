@@ -19,7 +19,7 @@ class TrackViewController: UIViewController {
     //MARK:- View Lifecycle & Configuration
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         checkLocationServices()
     }
     
