@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Auth0.plist
-   Tracmobility
-
-   Created by Emil Vaklinov on 09/02/2021.
-   Copyright (c) 2021 ___ORGANIZATIONNAME___. All rights reserved.
--->
 <plist version="1.0">
 <dict>
-   <key>ClientId</key>
-   <string>YOUR_CLIENT_ID</string>
-   <key>Domain</key>
-   <string>YOUR_DOMAIN</string>
+	<key>ClientId</key>
+	<string>h2RrJwsUloUJMrC8VfRgHnOaJzx9kg1F</string>
+	<key>Domain</key>
+	<string>dev-1i3ydrd3.eu.auth0.com</string>
 </dict>
 </plist>
