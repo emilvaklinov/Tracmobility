@@ -87,30 +87,30 @@ class SignupViewController: UIViewController {
         lastName.resignFirstResponder()
         firstName.resignFirstResponder()
         
-//        guard let firstName = firstName.text, !firstName.isEmpty else {
-//            let alert = UIAlertController(title: "Invalid name?", message: "Please enter valid name!", preferredStyle: .alert)
-//
-//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-//
-//            self.present(alert, animated: true)
-//            return
-//        }
-//        guard let lastName = lastName.text, !lastName.isEmpty else {
-//            let alert = UIAlertController(title: "Invalid Last Name?", message: "Please enter valid  last name!", preferredStyle: .alert)
-//
-//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-//
-//            self.present(alert, animated: true)
-//            return
-//        }
-//        guard let email = email.text, !email.isEmpty else {
-//            let alert = UIAlertController(title: "Invalid Email", message: "Please enter a valid email address!", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        guard let firstName = firstName.text, !firstName.isEmpty else {
+            let alert = UIAlertController(title: "Invalid name?", message: "Please enter valid name!", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
+            return
+        }
+        guard let lastName = lastName.text, !lastName.isEmpty else {
+            let alert = UIAlertController(title: "Invalid Last Name?", message: "Please enter valid  last name!", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
+            return
+        }
+        guard let email = email.text, !email.isEmpty else {
+            let alert = UIAlertController(title: "Invalid Email", message: "Please enter a valid email address!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             
-//            self.present(alert, animated: true)
-//
-//            return
-//        }
+            self.present(alert, animated: true)
+
+            return
+        }
         //Navigate to the TrackViewController
         performSegue(withIdentifier: "trackVC", sender: self)
     }

@@ -12,12 +12,14 @@ import CoreLocation
 class TrackViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    //MARK:- Properties
     let locationManager = CLLocationManager()
     
+    //MARK:- View Lifecycle & Configuration
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         checkLocationServices()
     }
     
@@ -25,7 +27,7 @@ class TrackViewController: UIViewController {
         if CLLocationManager.locationServicesEnabled() {
             checkLocationAuthorization()
         } else {
-            let alert = UIAlertController(title: "Location not active", message: "Please turn ON your location from the settings", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Location not active", message: "Please, turn ON your location from the settings", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             
             self.present(alert, animated: true)
@@ -52,6 +54,7 @@ class TrackViewController: UIViewController {
     }
 }
 
+//MARK:- LocationManagerDelegate
 extension TrackViewController : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
@@ -63,9 +66,8 @@ extension TrackViewController : CLLocationManagerDelegate {
         if let location = locations.first {
             let span = MKCoordinateSpan.init(latitudeDelta: 0.05, longitudeDelta: 0.05)
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
-                        mapView.setRegion(region, animated: true)
+            mapView.setRegion(region, animated: true)
             
         }
-        
     }
 }
