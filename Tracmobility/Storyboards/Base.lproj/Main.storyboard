@@ -502,8 +502,8 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.202020202.0.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skj-gT-XqE">
-                                        <rect key="frame" x="8" y="582" width="107.5" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="8" y="583" width="101" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -516,20 +516,35 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgC-Xx-Dok">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="dQc-Nv-rXF"/>
+                                            <constraint firstAttribute="height" constant="30" id="esn-jI-1xy"/>
+                                        </constraints>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Clt-QK-ipN" kind="unwind" unwindAction="unwindToMap:" id="R50-kw-GKI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.29447132349999999" green="0.61768412589999999" blue="0.65102928879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Skj-gT-XqE" secondAttribute="trailing" symbolic="YES" id="2b9-fM-jzY"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Skj-gT-XqE" secondAttribute="trailing" constant="20" symbolic="YES" id="2b9-fM-jzY"/>
                                     <constraint firstItem="4En-vb-thf" firstAttribute="top" secondItem="T50-at-EhY" secondAttribute="bottom" constant="8" symbolic="YES" id="4LS-gc-TAd"/>
                                     <constraint firstItem="NRq-1Q-lqb" firstAttribute="centerX" secondItem="IOH-ik-Atj" secondAttribute="centerX" id="D50-iZ-niY"/>
                                     <constraint firstAttribute="trailing" secondItem="TcD-a7-8eU" secondAttribute="trailing" constant="40" id="Jce-13-w67"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NRq-1Q-lqb" secondAttribute="trailing" constant="59.5" id="Niv-s1-YHt"/>
                                     <constraint firstItem="Skj-gT-XqE" firstAttribute="leading" secondItem="IOH-ik-Atj" secondAttribute="leading" constant="8" id="OVp-z8-anP"/>
                                     <constraint firstAttribute="trailing" secondItem="4En-vb-thf" secondAttribute="trailing" constant="93" id="WIu-ad-S2l"/>
+                                    <constraint firstAttribute="trailing" secondItem="WgC-Xx-Dok" secondAttribute="trailing" id="aSM-Sq-Nol"/>
                                     <constraint firstItem="NRq-1Q-lqb" firstAttribute="top" secondItem="TcD-a7-8eU" secondAttribute="bottom" constant="15" id="dJT-hb-ZhK"/>
                                     <constraint firstAttribute="bottom" secondItem="Skj-gT-XqE" secondAttribute="bottom" constant="8" id="dW8-Ic-R1e"/>
                                     <constraint firstItem="TcD-a7-8eU" firstAttribute="top" secondItem="4En-vb-thf" secondAttribute="bottom" constant="19" id="jLU-z0-Ccw"/>
                                     <constraint firstItem="4En-vb-thf" firstAttribute="leading" secondItem="IOH-ik-Atj" secondAttribute="leading" constant="92" id="jPb-hd-ooV"/>
+                                    <constraint firstItem="WgC-Xx-Dok" firstAttribute="top" secondItem="IOH-ik-Atj" secondAttribute="top" id="kD7-gN-qIv"/>
                                     <constraint firstItem="TcD-a7-8eU" firstAttribute="leading" secondItem="IOH-ik-Atj" secondAttribute="leading" constant="40" id="ks0-mq-HCF"/>
                                     <constraint firstAttribute="trailing" secondItem="T50-at-EhY" secondAttribute="trailing" constant="30" id="kuq-Mc-WeK"/>
                                     <constraint firstItem="NRq-1Q-lqb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IOH-ik-Atj" secondAttribute="leading" constant="59.5" id="lgd-3n-ktp"/>
@@ -550,6 +565,7 @@
                     <navigationItem key="navigationItem" id="pIq-XU-5gK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzo-h3-Sv3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Clt-QK-ipN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1828" y="87.706146926536732"/>
         </scene>
