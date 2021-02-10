@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         ApplicationDelegate.shared.application(
             application,
             didFinishLaunchingWithOptions: launchOptions )
-        // For Delay 2.5 second after default launch time...
-        Thread.sleep(forTimeInterval: 2.5)
+        // For Delay 2 second after default launch time...
+        Thread.sleep(forTimeInterval: 2)
         // Use Firebase library to configure APIs
 //        FirebaseApp.configure()
 //
@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 //        GIDSignIn.sharedInstance().delegate = self
         
         // Initialize sign-in Gmail
-        GIDSignIn.sharedInstance().clientID = "73257056819-q5b8ej8183aj5g4cc2tai2jadfefgcgt.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = "130426822710-1hdrodejttrslf8cl996dmklvevf289l.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self  // If AppDelegate conforms to GIDSignInDelegate
         
         return true

@@ -303,6 +303,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y5h-PC-Duj"/>
+                    <connections>
+                        <outlet property="mapView" destination="7pI-3K-cvh" id="Dbq-hh-lXb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cE-64-IwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,7 +320,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOH-ik-Atj">
-                                <rect key="frame" x="0.0" y="60" width="270" height="587"/>
+                                <rect key="frame" x="0.0" y="40" width="270" height="607"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4En-vb-thf">
                                         <rect key="frame" x="92" y="66.5" width="85" height="84"/>
@@ -499,7 +502,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.202020202.0.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skj-gT-XqE">
-                                        <rect key="frame" x="8" y="562" width="107.5" height="17"/>
+                                        <rect key="frame" x="8" y="582" width="107.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -540,7 +543,7 @@
                         <constraints>
                             <constraint firstItem="VHZ-fo-byj" firstAttribute="trailing" secondItem="IOH-ik-Atj" secondAttribute="trailing" constant="105" id="K4a-kh-XJF"/>
                             <constraint firstItem="IOH-ik-Atj" firstAttribute="leading" secondItem="VHZ-fo-byj" secondAttribute="leading" id="nWC-Gc-Zxp"/>
-                            <constraint firstItem="IOH-ik-Atj" firstAttribute="top" secondItem="VHZ-fo-byj" secondAttribute="top" constant="60" id="upt-m4-dta"/>
+                            <constraint firstItem="IOH-ik-Atj" firstAttribute="top" secondItem="VHZ-fo-byj" secondAttribute="top" constant="40" id="upt-m4-dta"/>
                             <constraint firstItem="IOH-ik-Atj" firstAttribute="bottom" secondItem="VHZ-fo-byj" secondAttribute="bottom" id="vEW-nO-keL"/>
                         </constraints>
                     </view>

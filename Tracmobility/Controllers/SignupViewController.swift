@@ -37,7 +37,27 @@ class SignupViewController: UIViewController {
         // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
+        let loginButton = FBLoginButton().self
+//                loginButton.center = view.center
+//                view.addSubview(loginButton)
+        loginButton.permissions = ["public_profile", "email"]
+        if let token = AccessToken.current,
+                !token.isExpired {
+                // User is logged in, do work such as go to next view controller.
+            performSegue(withIdentifier: "trackVC", sender: self)
+            }
         
+        if let token = AccessToken.current, !token.isExpired {
+            let token = token.tokenString
+            let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
+                                                     parameters: ["fields": "email, name"],
+                                                     tokenString: token,
+                                                     version: nil,
+                                                     httpMethod: .get)
+            request.start { (connection, result, error) in
+                print("\(String(describing: result))")
+            }
+        }
     }
     
     @IBAction func googleSignInClicked(sender: UIButton) {
@@ -47,6 +67,19 @@ class SignupViewController: UIViewController {
     
     @IBAction func facebookSignInClicked(_ sender: FBButton) {
         facebookLoginButton.sendActions(for: .touchUpInside)
+
+    }
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error) {
+        let token = result?.token?.tokenString
+        let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
+                                                 parameters: ["fields": "email, name"],
+                                                 tokenString: token,
+                                                 version: nil,
+                                                 httpMethod: .get)
+        request.start { (connection, result, error) in
+            print("\(String(describing: result))")
+        }
     }
     
     @IBAction func signUpButtonClicked(_ sender: UIButton) {
@@ -54,31 +87,31 @@ class SignupViewController: UIViewController {
         lastName.resignFirstResponder()
         firstName.resignFirstResponder()
         
-        guard let firstName = firstName.text, !firstName.isEmpty else {
-            let alert = UIAlertController(title: "Invalid name?", message: "Please enter valid name!", preferredStyle: .alert)
+//        guard let firstName = firstName.text, !firstName.isEmpty else {
+//            let alert = UIAlertController(title: "Invalid name?", message: "Please enter valid name!", preferredStyle: .alert)
+//
+//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+//
+//            self.present(alert, animated: true)
+//            return
+//        }
+//        guard let lastName = lastName.text, !lastName.isEmpty else {
+//            let alert = UIAlertController(title: "Invalid Last Name?", message: "Please enter valid  last name!", preferredStyle: .alert)
+//
+//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+//
+//            self.present(alert, animated: true)
+//            return
+//        }
+//        guard let email = email.text, !email.isEmpty else {
+//            let alert = UIAlertController(title: "Invalid Email", message: "Please enter a valid email address!", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            
-            self.present(alert, animated: true)
-            return
-        }
-        guard let lastName = lastName.text, !lastName.isEmpty else {
-            let alert = UIAlertController(title: "Invalid Last Name?", message: "Please enter valid  last name!", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            
-            self.present(alert, animated: true)
-            return
-        }
-        guard let email = email.text, !email.isEmpty else {
-            let alert = UIAlertController(title: "Invalid Email", message: "Please enter a valid email address!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            
-            self.present(alert, animated: true)
-            
-            return
-        }
-                //Navigate to the TrackViewController
+//            self.present(alert, animated: true)
+//
+//            return
+//        }
+        //Navigate to the TrackViewController
         performSegue(withIdentifier: "trackVC", sender: self)
     }
 }
@@ -91,11 +124,12 @@ extension SignupViewController: GIDSignInDelegate {
             print(error.localizedDescription)
             return
         }
-        
-        let authentication = user.authentication
-        print("Access token:", authentication?.accessToken! as Any)
+//                else {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let trackVC = storyboard.instantiateViewController(withIdentifier: "TrackViewController") as! TrackViewController
+//            self.present(trackVC, animated: false, completion: nil)
+//        }
     }
-    
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         
     }
@@ -121,4 +155,3 @@ extension SignupViewController {
     }
     
 }
-
