@@ -15,7 +15,7 @@ class ApplePayViewController: UIViewController {
 //        applePayController.delegate = self
         // Do any additional setup after loading the view.
     }
-    
+
     
     @IBAction func purchaseItem(_ sender: Any) {
         

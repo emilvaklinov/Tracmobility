@@ -27,6 +27,7 @@ class TrackViewController: UIViewController {
         _ = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
     }
+    
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             checkLocationAuthorization()
